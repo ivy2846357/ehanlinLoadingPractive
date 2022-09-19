@@ -200,7 +200,7 @@ body {
 }
 @media screen and (max-width: 576px) {
   .campus-tree {
-    bottom: 50px;
+    bottom: 0;
     height: 950px;
   }
 }
@@ -238,7 +238,6 @@ body {
 @media screen and (max-width: 576px) {
   .campus-tree-right {
     right: -137px;
-    bottom: 20px;
   }
 }
 .campus-tree-item {
