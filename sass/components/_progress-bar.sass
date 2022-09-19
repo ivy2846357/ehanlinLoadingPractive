@@ -1,0 +1,68 @@
+/* ------------------- 進度條 ------------------- */
+
+.progress
+    
+    // 進度條 container 設定
+    &-container
+        display: block
+        margin: 2rem auto 0 auto
+        width: 40%
+        height: 15px
+        border-radius: 30px
+        overflow: hidden
+
+        +respond-to('pad')
+            width: 55%
+        +respond-to('sphone')
+            width: 70%
+            height: 12px
+        +respond-to('smphone')
+            margin: 1rem auto
+            width: 85%
+        +respond-to('sephone')
+            width: 90%
+
+        // 一般樣式設定（白框）
+        &.default
+            border: 4px solid #fff
+            background-color: rgba(black, .1)
+            box-shadow: 0 0 .5rem rgba(black, .3)
+
+            +respond-to('phone')
+                border: 3px solid #fff
+            +respond-to('sphone')
+                border: 2px solid #fff
+
+        // 校園版樣式設定（藍綠框）
+        &.green
+            border: 4px solid #2F8986
+            background-color: rgba(255,199,41, .2)
+
+            +respond-to('phone')
+                border: 3px solid #2F8986
+                margin: 1rem auto
+
+    // 當前進度條樣式設定
+    &-bar
+        width: 50%
+        height: 100%
+        position: relative
+        // transition-property: width
+        // transition-timing-function: linear
+
+        // 一般樣式設定（藍色進度條）
+        &.default
+            background-color: #006DB7
+        // 校園版樣式設定（綠色進度條）
+        &.green
+            background-color: #92D34F
+
+        // 進度條陰影
+        &::after
+            content: ''
+            position: absolute
+            bottom: 0
+            left: 0
+            height: 50%
+            width: 100%
+            background-color: rgba(black, .3)

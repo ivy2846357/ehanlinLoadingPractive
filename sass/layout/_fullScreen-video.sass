@@ -1,0 +1,64 @@
+/* ------------------- 第四版（影片介面） ------------------- */
+    
+// 共用 container （z-index 會改動）
+.video-container
+    width: 100%
+    height: 100vh
+    overflow: hidden
+    z-index: 30
+    background-color: #fff
+
+    +poA(top,0,left,0)
+
+.video
+
+    // 背景圖上半部（藍灰背景）
+    &-background-top
+        width: 100%
+        height: auto
+        position: absolute
+        top: -10%
+        left: 0
+        z-index: 5
+        +respond-to('pad')
+            top: 0
+
+    // albi 設定
+    &-albi
+        width: 100%
+        height: auto
+
+    // 內容區塊設定（文字、進度條）
+    &-content
+        width: 55%
+        height: auto
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%,-50%)
+        z-index: 10
+        +respond-to('notebook')
+            width: 70%
+        +respond-to('pad')
+            width: 80%
+        +respond-to('phone')
+            width: 90%
+
+    // 文字區塊設定
+    &-word
+        margin-top: 5rem
+        display: block
+        text-align: center
+        font-size: 1.2rem
+        font-weight: bold
+        color: #015ba9
+        +respond-to('pad')
+            margin-top: 3rem
+        +respond-to('phone')
+            margin-top: 1.5rem
+            font-size: 1rem
+        +respond-to('smphone')
+            margin-top: 2rem
+        +respond-to('sephone')
+            margin-top: 3rem
+            font-size: .8rem

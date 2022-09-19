@@ -1,0 +1,51 @@
+/* ------------------- 斷點設定 ------------------- */
+
+$breakpoint-pc: 1500px
+$breakpoint-notebook: 1200px
+$breakpoint-pad: 992px
+$breakpoint-phone: 768px
+$breakpoint-sphone: 576px
+$breakpoint-smphone: 450px
+$breakpoint-sephone: 380px
+
+@mixin respond-to($breakponit)
+    @if($breakponit == 'pc')
+        @media screen and (max-width: #{$breakpoint-pc})
+            @content
+    @if($breakponit == 'notebook')
+        @media screen and (max-width: #{$breakpoint-notebook})
+            @content
+    @else if($breakponit == 'pad')
+        @media screen and (max-width: #{$breakpoint-pad})
+            @content
+    @else if($breakponit == 'phone')
+        @media screen and (max-width: #{$breakpoint-phone})
+            @content
+    @else if($breakponit == 'sphone')
+        @media screen and (max-width: #{$breakpoint-sphone})
+            @content
+    @else if($breakponit == 'smphone')
+        @media screen and (max-width: #{$breakpoint-smphone})
+            @content
+    @else if($breakponit == 'sephone')
+        @media screen and (max-width: #{$breakpoint-sephone})
+            @content
+
+/* ------------------- mixin 設定 ------------------- */
+
+@mixin graphicSize($w, $h: $w)
+    width: $w
+    height: $h
+
+//- 位置設定
+@mixin poA($v ,$vNum ,$h ,$hNum )
+    position: absolute
+    @if $v == top
+        top: $vNum
+    @else if $v == bottom
+        bottom: $vNum
+
+    @if $h == right
+        right: $hNum
+    @else if $h == left
+        left: $hNum

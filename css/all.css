@@ -1,0 +1,831 @@
+@charset "UTF-8";
+/* ------------------- 斷點設定 ------------------- */
+/* ------------------- mixin 設定 ------------------- */
+/* ------------------- 共用樣式設定 ------------------- */
+body {
+  margin: 0;
+  position: relative;
+}
+
+.loading-template {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+}
+
+/* ------------------- 進度條 ------------------- */
+.progress-container {
+  display: block;
+  margin: 2rem auto 0 auto;
+  width: 40%;
+  height: 15px;
+  border-radius: 30px;
+  overflow: hidden;
+}
+@media screen and (max-width: 992px) {
+  .progress-container {
+    width: 55%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .progress-container {
+    width: 70%;
+    height: 12px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .progress-container {
+    margin: 1rem auto;
+    width: 85%;
+  }
+}
+@media screen and (max-width: 380px) {
+  .progress-container {
+    width: 90%;
+  }
+}
+.progress-container.default {
+  border: 4px solid #fff;
+  background-color: rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+}
+@media screen and (max-width: 768px) {
+  .progress-container.default {
+    border: 3px solid #fff;
+  }
+}
+@media screen and (max-width: 576px) {
+  .progress-container.default {
+    border: 2px solid #fff;
+  }
+}
+.progress-container.green {
+  border: 4px solid #2F8986;
+  background-color: rgba(255, 199, 41, 0.2);
+}
+@media screen and (max-width: 768px) {
+  .progress-container.green {
+    border: 3px solid #2F8986;
+    margin: 1rem auto;
+  }
+}
+.progress-bar {
+  width: 50%;
+  height: 100%;
+  position: relative;
+}
+.progress-bar.default {
+  background-color: #006DB7;
+}
+.progress-bar.green {
+  background-color: #92D34F;
+}
+.progress-bar::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 50%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* ------------------- 第一版（校園介面） ------------------- */
+.campus-container {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+
+.campus-top {
+  background-image: url("../img/campus-bg-top.png");
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 75%;
+}
+.campus-bottom {
+  background-image: url("../img/campus-bg-bottom.png");
+  background-size: cover;
+  background-position: center top;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+}
+.campus-tree {
+  width: 700px;
+  height: 1300px;
+  position: absolute;
+  bottom: -30px;
+}
+@media screen and (max-width: 992px) {
+  .campus-tree {
+    bottom: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .campus-tree {
+    bottom: 20px;
+    width: 450px;
+    height: 1000px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .campus-tree {
+    bottom: 50px;
+  }
+}
+.campus-tree-left {
+  left: -200px;
+}
+@media screen and (max-width: 992px) {
+  .campus-tree-left {
+    left: -290px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .campus-tree-left {
+    left: -130px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .campus-tree-left {
+    left: -160px;
+  }
+}
+.campus-tree-right {
+  right: -200px;
+}
+@media screen and (max-width: 992px) {
+  .campus-tree-right {
+    right: -220px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .campus-tree-right {
+    right: -130px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .campus-tree-right {
+    right: -130px;
+    bottom: 20px;
+  }
+}
+.campus-tree-item {
+  height: 70%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.campus-grass {
+  width: 400px;
+  height: 300px;
+  position: absolute;
+}
+@media screen and (max-width: 992px) {
+  .campus-grass {
+    width: 400px;
+    height: 250px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .campus-grass {
+    width: 500px;
+    height: 300px;
+  }
+}
+.campus-grass-left {
+  left: -70px;
+}
+@media screen and (max-width: 768px) {
+  .campus-grass-left {
+    left: -150px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .campus-grass-left {
+    left: -140px;
+  }
+}
+.campus-grass-right {
+  right: -70px;
+}
+@media screen and (max-width: 768px) {
+  .campus-grass-right {
+    right: -170px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .campus-grass-right {
+    right: -220px;
+  }
+}
+.campus-grass-item {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -150px;
+  overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+  .campus-grass-item {
+    top: -130px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .campus-grass-item {
+    top: -100px;
+  }
+}
+.campus-content {
+  width: 60%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 2rem;
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media screen and (max-width: 992px) {
+  .campus-content {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .campus-content {
+    margin-top: 0;
+    padding: 1rem 2rem;
+  }
+}
+.campus-content-word {
+  color: white;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .campus-content-word {
+    font-size: 0.8rem;
+  }
+}
+
+/* ------------------- 第二版（教室介面） ------------------- */
+.classroom-container {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 30;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.classroom-background {
+  background-image: url("../img/classroom-bg.png");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.classroom-background-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 25%;
+  z-index: 5;
+}
+.classroom-talk {
+  width: 1500px;
+  height: 337px;
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+@media screen and (max-width: 1500px) {
+  .classroom-talk {
+    width: 1150px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .classroom-talk {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .classroom-talk {
+    height: 300px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .classroom-talk {
+    width: 95%;
+    height: 250px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .classroom-talk {
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    height: 115%;
+    height: 200px;
+    bottom: -35%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .classroom-talk {
+    bottom: -25%;
+  }
+}
+@media screen and (max-width: 380px) {
+  .classroom-talk {
+    bottom: -30%;
+  }
+}
+.classroom-talk-item {
+  width: 100%;
+  height: 30%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+}
+@media screen and (max-width: 768px) {
+  .classroom-talk-item {
+    height: 25%;
+  }
+}
+.classroom-talk-block {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.classroom-talk-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #e57417;
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: 90%;
+  text-align: center;
+}
+@media screen and (max-width: 992px) {
+  .classroom-talk-content {
+    top: 45%;
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .classroom-talk-content {
+    top: 50%;
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 380px) {
+  .classroom-talk-content {
+    top: 47%;
+    font-size: 0.8rem;
+  }
+}
+.classroom-talk-tag {
+  position: absolute;
+  top: 0;
+  left: 6%;
+  width: 220px;
+  height: auto;
+}
+@media screen and (max-width: 992px) {
+  .classroom-talk-tag {
+    width: 170px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .classroom-talk-tag {
+    width: 150px;
+    top: -6%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .classroom-talk-tag {
+    top: -19%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .classroom-talk-tag {
+    width: 120px;
+    top: -13%;
+  }
+}
+@media screen and (max-width: 380px) {
+  .classroom-talk-tag {
+    top: -15%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .classroom-talk-word {
+    padding: 1rem 1.5rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  .classroom-talk-word {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+@media screen and (max-width: 380px) {
+  .classroom-talk-word {
+    padding: 1rem 0.5rem 0 0.5rem;
+  }
+}
+.classroom-triangle {
+  position: absolute;
+  bottom: 80px;
+  right: 100px;
+  width: 25px;
+  height: auto;
+}
+@media screen and (max-width: 1200px) {
+  .classroom-triangle {
+    right: 80px;
+    bottom: 70px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .classroom-triangle {
+    right: 60px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .classroom-triangle {
+    right: 50px;
+    bottom: 45px;
+    width: 20px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .classroom-triangle {
+    bottom: 28px;
+    right: 25px;
+    width: 15px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .classroom-triangle {
+    width: 13px;
+  }
+}
+
+/* ------------------- 第三版（popup 介面） ------------------- */
+.popup-container {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 30;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.popup-background {
+  background-image: url("../img/classroom-bg.png");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.popup-background::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.popup-block-item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 60%;
+  height: 50%;
+  padding: 10px;
+  background-color: #ddd;
+  border-radius: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media screen and (max-width: 1200px) {
+  .popup-block-item {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .popup-block-item {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .popup-block-item {
+    width: 90%;
+    height: 43%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .popup-block-item {
+    padding: 7px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .popup-block-item {
+    height: 47%;
+  }
+}
+@media screen and (max-width: 380px) {
+  .popup-block-item {
+    height: 50%;
+    padding: 5px;
+  }
+}
+.popup-modal {
+  background-color: #fff;
+  border-radius: 30px;
+  width: 100%;
+  height: 100%;
+}
+.popup-albi {
+  width: 500px;
+  height: auto;
+  position: absolute;
+  top: -150px;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+@media screen and (max-width: 768px) {
+  .popup-albi {
+    width: 400px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .popup-albi {
+    width: 350px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .popup-albi {
+    width: 300px;
+    top: -130px;
+  }
+}
+.popup-talk {
+  width: 50px;
+  height: auto;
+}
+@media screen and (max-width: 768px) {
+  .popup-talk {
+    width: 40px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .popup-talk {
+    width: 33px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .popup-talk {
+    width: 30px;
+  }
+}
+.popup-talk.top {
+  position: absolute;
+  top: -30px;
+  left: -60px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+@media screen and (max-width: 992px) {
+  .popup-talk.top {
+    left: -50px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .popup-talk.top {
+    left: -40px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .popup-talk.top {
+    top: -15px;
+    left: -25px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .popup-talk.top {
+    top: -10px;
+  }
+}
+.popup-talk.bottom {
+  position: absolute;
+  bottom: -30px;
+  right: -60px;
+}
+@media screen and (max-width: 992px) {
+  .popup-talk.bottom {
+    right: -50px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .popup-talk.bottom {
+    right: -40px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .popup-talk.bottom {
+    bottom: -15px;
+    right: -25px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .popup-talk.bottom {
+    bottom: -10px;
+  }
+}
+.popup-triangle {
+  width: 30px;
+  height: 25px;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+}
+@media screen and (max-width: 768px) {
+  .popup-triangle {
+    width: 25px;
+    height: 20px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .popup-triangle {
+    width: 20px;
+    height: 15px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .popup-triangle {
+    bottom: 25px;
+    right: 25px;
+  }
+}
+.popup-content {
+  width: 70%;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  padding: 0 10px;
+}
+@media screen and (max-width: 768px) {
+  .popup-content {
+    top: 50%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .popup-content {
+    top: 45%;
+  }
+}
+.popup-word {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #1c4a8c;
+}
+@media screen and (max-width: 768px) {
+  .popup-word {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 380px) {
+  .popup-word {
+    font-size: 0.9rem;
+  }
+}
+
+/* ------------------- 第四版（影片介面） ------------------- */
+.video-container {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 30;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.video-background-top {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: -10%;
+  left: 0;
+  z-index: 5;
+}
+@media screen and (max-width: 992px) {
+  .video-background-top {
+    top: 0;
+  }
+}
+.video-albi {
+  width: 100%;
+  height: auto;
+}
+.video-content {
+  width: 55%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 10;
+}
+@media screen and (max-width: 1200px) {
+  .video-content {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .video-content {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .video-content {
+    width: 90%;
+  }
+}
+.video-word {
+  margin-top: 5rem;
+  display: block;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #015ba9;
+}
+@media screen and (max-width: 992px) {
+  .video-word {
+    margin-top: 3rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .video-word {
+    margin-top: 1.5rem;
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  .video-word {
+    margin-top: 2rem;
+  }
+}
+@media screen and (max-width: 380px) {
+  .video-word {
+    margin-top: 3rem;
+    font-size: 0.8rem;
+  }
+}

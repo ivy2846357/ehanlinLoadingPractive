@@ -1,0 +1,143 @@
+/* ------------------- 第一版（校園介面） ------------------- */
+
+// 共用 container （z-index 會改動）
+.campus-container
+    width: 100%
+    height: 100vh
+    overflow: hidden
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 50
+
+.campus
+
+    // 背景圖上半部（校園圖檔）
+    &-top
+        background-image: url('../img/campus-bg-top.png')
+        background-size: cover
+        background-position: center
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 75%
+
+    // 背景圖下半部（滿版色塊）
+    &-bottom
+        background-image: url('../img/campus-bg-bottom.png')
+        background-size: cover
+        background-position: center top
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 100%
+        height: 30%
+
+    // 樹木圖檔設定
+    &-tree
+        width: 700px
+        height: 1300px
+        position: absolute
+        bottom: -30px
+        +respond-to('pad')
+            bottom: 30px
+        +respond-to('phone')
+            bottom: 20px
+            width: 450px
+            height: 1000px
+        +respond-to('sphone')
+            bottom: 50px
+
+        // 左邊的樹
+        &-left
+            left: -200px
+            +respond-to('pad')
+                left: -290px
+            +respond-to('phone')
+                left: -130px
+            +respond-to('sphone')
+                left: -160px
+
+        // 右邊的樹
+        &-right
+            right: -200px
+            +respond-to('pad')
+                right: -220px
+            +respond-to('phone')
+                right: -130px
+            +respond-to('sphone')
+                right: -130px
+                bottom: 20px
+
+        // 樹木 container
+        &-item
+            height: 70%
+            width: 100%
+            position: relative
+            overflow: hidden
+
+    // 樹木下方草叢圖檔
+    &-grass
+        width: 400px
+        height: 300px
+        position: absolute
+        +respond-to('pad')
+            width: 400px
+            height: 250px
+        +respond-to('phone')
+            width: 500px
+            height: 300px
+
+        // 左邊的草叢
+        &-left
+            left: -70px
+            +respond-to('phone')
+                left: -150px
+            +respond-to('sphone')
+                left: -140px
+
+        // 右邊的草叢
+        &-right
+            right: -70px
+            +respond-to('phone')
+                right: -170px
+            +respond-to('sphone')
+                right: -220px
+
+        // 草叢 container
+        &-item
+            width: 100%
+            height: 100%
+            position: absolute
+            top: -150px
+            overflow: hidden
+            +respond-to('phone')
+                top: -130px
+            +respond-to('sphone')
+                top: -100px
+
+    // 文字區塊設定
+    &-content
+        width: 60%
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%,-50%)
+        padding: 2rem
+        margin-top: 1rem
+        display: flex
+        justify-content: center
+        flex-direction: column
+        +respond-to('pad')
+            width: 70%
+        +respond-to('sphone')
+            margin-top: 0
+            padding: 1rem 2rem
+
+        // 文字樣式設定
+        &-word
+            color: white
+            text-align: center
+            +respond-to('phone')
+                font-size: .8rem
