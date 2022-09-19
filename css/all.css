@@ -420,7 +420,7 @@ body {
 }
 @media screen and (max-width: 380px) {
   .classroom-talk {
-    bottom: -40%;
+    bottom: -50%;
   }
 }
 .classroom-talk-item {
