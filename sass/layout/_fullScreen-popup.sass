@@ -39,7 +39,7 @@
         left: 50%
         transform: translate(-50%,-50%)
         width: 60%
-        height: 50%
+        height: 55%
         padding: 10px
         background-color: #ddd
         border-radius: 30px
@@ -50,14 +50,10 @@
         +respond-to('pad')
             width: 80%
         +respond-to('phone')
+            top: 55%
             width: 90%
-            height: 43%
-        +respond-to('phone')
             padding: 7px
-        +respond-to('sphone')
-            height: 47%
-        +respond-to('sephone')
-            height: 50%
+        +respond-to('sephone') 
             padding: 5px
 
     // 內容區塊內層設定
@@ -80,8 +76,8 @@
         +respond-to('phone')
             width: 350px
         +respond-to('sephone')
-            width: 300px
-            top: -130px
+            width: 280px
+            top: -110px
 
     // 對話引號圖檔設定（“）
     &-talk
@@ -132,9 +128,11 @@
         position: absolute
         bottom: 30px
         right: 30px
+        animation: triangle-naimation-pc 2s cubic-bezier(0.83, 0, 0.17, 1) infinite alternate
         +respond-to('phone')
             width: 25px
             height: 20px
+            animation: triangle-naimation-mobile 2s cubic-bezier(0.83, 0, 0.17, 1) infinite alternate
         +respond-to('sphone')
             width: 20px
             height: 15px
@@ -146,12 +144,12 @@
     &-content
         width: 70%
         position: absolute
-        top: 55%
+        top: 57%
         left: 50%
         transform: translate(-50%)
         padding: 0 10px
         +respond-to('phone')
-            top: 50%
+            top: 45%
         +respond-to('sphone')
             top: 45%
 

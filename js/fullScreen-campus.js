@@ -1,8 +1,8 @@
 
 const campusLeftTree = document.querySelector('.campus-tree-left');
 const campusRightTree = document.querySelector('.campus-tree-right');
-let leftTreePosition = -200;
-let rightTreePosition = -370;
+// let leftTreePosition = -200;
+// let rightTreePosition = -370;
 
 window.addEventListener('resize', function(){
     leftTreePosition -= 10;

@@ -14,6 +14,63 @@ body {
   z-index: 1000;
 }
 
+/* ------------------- 對話框三角形動畫設定 ------------------- */
+@-webkit-keyframes triangle-naimation-pc {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(-12px);
+            transform: translateY(-12px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+@keyframes triangle-naimation-pc {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(-12px);
+            transform: translateY(-12px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+@-webkit-keyframes triangle-naimation-mobile {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(-6px);
+            transform: translateY(-6px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+@keyframes triangle-naimation-mobile {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(-6px);
+            transform: translateY(-6px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
 /* ------------------- 進度條 ------------------- */
 .progress-container {
   display: block;
@@ -144,6 +201,7 @@ body {
 @media screen and (max-width: 576px) {
   .campus-tree {
     bottom: 50px;
+    height: 950px;
   }
 }
 .campus-tree-left {
@@ -179,7 +237,7 @@ body {
 }
 @media screen and (max-width: 576px) {
   .campus-tree-right {
-    right: -130px;
+    right: -137px;
     bottom: 20px;
   }
 }
@@ -363,7 +421,7 @@ body {
 }
 @media screen and (max-width: 380px) {
   .classroom-talk {
-    bottom: -30%;
+    bottom: -40%;
   }
 }
 .classroom-talk-item {
@@ -470,6 +528,8 @@ body {
   right: 100px;
   width: 25px;
   height: auto;
+  -webkit-animation: triangle-naimation-pc 2s cubic-bezier(0.83, 0, 0.17, 1) infinite alternate;
+          animation: triangle-naimation-pc 2s cubic-bezier(0.83, 0, 0.17, 1) infinite alternate;
 }
 @media screen and (max-width: 1200px) {
   .classroom-triangle {
@@ -487,6 +547,8 @@ body {
     right: 50px;
     bottom: 45px;
     width: 20px;
+    -webkit-animation: triangle-naimation-mobile 2s cubic-bezier(0.83, 0, 0.17, 1) infinite alternate;
+            animation: triangle-naimation-mobile 2s cubic-bezier(0.83, 0, 0.17, 1) infinite alternate;
   }
 }
 @media screen and (max-width: 576px) {
@@ -537,7 +599,7 @@ body {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   width: 60%;
-  height: 50%;
+  height: 55%;
   padding: 10px;
   background-color: #ddd;
   border-radius: 30px;
@@ -560,23 +622,13 @@ body {
 }
 @media screen and (max-width: 768px) {
   .popup-block-item {
+    top: 55%;
     width: 90%;
-    height: 43%;
-  }
-}
-@media screen and (max-width: 768px) {
-  .popup-block-item {
     padding: 7px;
-  }
-}
-@media screen and (max-width: 576px) {
-  .popup-block-item {
-    height: 47%;
   }
 }
 @media screen and (max-width: 380px) {
   .popup-block-item {
-    height: 50%;
     padding: 5px;
   }
 }
@@ -607,8 +659,8 @@ body {
 }
 @media screen and (max-width: 380px) {
   .popup-albi {
-    width: 300px;
-    top: -130px;
+    width: 280px;
+    top: -110px;
   }
 }
 .popup-talk {
@@ -690,11 +742,15 @@ body {
   position: absolute;
   bottom: 30px;
   right: 30px;
+  -webkit-animation: triangle-naimation-pc 2s cubic-bezier(0.83, 0, 0.17, 1) infinite alternate;
+          animation: triangle-naimation-pc 2s cubic-bezier(0.83, 0, 0.17, 1) infinite alternate;
 }
 @media screen and (max-width: 768px) {
   .popup-triangle {
     width: 25px;
     height: 20px;
+    -webkit-animation: triangle-naimation-mobile 2s cubic-bezier(0.83, 0, 0.17, 1) infinite alternate;
+            animation: triangle-naimation-mobile 2s cubic-bezier(0.83, 0, 0.17, 1) infinite alternate;
   }
 }
 @media screen and (max-width: 576px) {
@@ -712,7 +768,7 @@ body {
 .popup-content {
   width: 70%;
   position: absolute;
-  top: 55%;
+  top: 57%;
   left: 50%;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
@@ -720,7 +776,7 @@ body {
 }
 @media screen and (max-width: 768px) {
   .popup-content {
-    top: 50%;
+    top: 45%;
   }
 }
 @media screen and (max-width: 576px) {
