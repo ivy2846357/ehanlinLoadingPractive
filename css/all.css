@@ -658,8 +658,8 @@ body {
 }
 @media screen and (max-width: 380px) {
   .popup-albi {
-    width: 280px;
-    top: -110px;
+    width: 250px;
+    top: -100px;
   }
 }
 .popup-talk {
