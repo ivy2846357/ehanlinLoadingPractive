@@ -379,7 +379,7 @@ body {
   height: 337px;
   position: absolute;
   left: 50%;
-  bottom: 10%;
+  bottom: 10px;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
@@ -410,17 +410,17 @@ body {
             transform: translate(-50%, -50%);
     height: 115%;
     height: 200px;
-    bottom: -35%;
+    bottom: -80px;
   }
 }
 @media screen and (max-width: 450px) {
   .classroom-talk {
-    bottom: -25%;
+    bottom: -40px;
   }
 }
 @media screen and (max-width: 380px) {
   .classroom-talk {
-    bottom: -50%;
+    bottom: -85px;
   }
 }
 .classroom-talk-item {
