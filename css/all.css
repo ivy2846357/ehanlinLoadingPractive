@@ -465,7 +465,7 @@ body {
     font-size: 1rem;
   }
 }
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 450px) {
   .classroom-talk-content {
     top: 47%;
     font-size: 0.8rem;
@@ -654,6 +654,12 @@ body {
 @media screen and (max-width: 768px) {
   .popup-albi {
     width: 350px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .popup-albi {
+    width: 320px;
+    top: -130px;
   }
 }
 @media screen and (max-width: 380px) {
