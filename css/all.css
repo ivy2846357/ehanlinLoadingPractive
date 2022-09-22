@@ -626,7 +626,7 @@ body {
   height: 100%;
 }
 .popup-albi {
-  width: 500px;
+  width: 450px;
   height: auto;
   position: absolute;
   top: -150px;
@@ -761,7 +761,7 @@ body {
 .popup-content {
   width: 70%;
   position: absolute;
-  top: 57%;
+  top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
@@ -779,7 +779,7 @@ body {
 }
 .popup-word {
   text-align: center;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: bold;
   color: #1c4a8c;
 }
@@ -845,7 +845,7 @@ body {
 }
 @media screen and (max-width: 768px) {
   .video-content {
-    width: 90%;
+    width: 85%;
   }
 }
 .video-word {
@@ -864,6 +864,7 @@ body {
 @media screen and (max-width: 768px) {
   .video-word {
     margin-top: 1.5rem;
+    padding: 0 1.5rem;
     font-size: 0.8rem;
   }
 }
