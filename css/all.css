@@ -406,21 +406,9 @@ body {
 }
 @media screen and (max-width: 576px) {
   .classroom-talk {
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
     height: 115%;
     height: 200px;
-    bottom: -80px;
-  }
-}
-@media screen and (max-width: 450px) {
-  .classroom-talk {
-    bottom: -40px;
-  }
-}
-@media screen and (max-width: 380px) {
-  .classroom-talk {
-    bottom: -85px;
+    bottom: 20px;
   }
 }
 .classroom-talk-item {

@@ -1,7 +1,7 @@
 
 const videoBackgroundTopImg = document.querySelector('.video-background-top')
 
-function checkImgState(){
+function checkVideoTemplateState(){
     if(window.innerWidth > 1200){
         videoBackgroundTopImg.src = './img/video-bg-top-pc.png'
     }else if(window.innerWidth < 992){
@@ -12,13 +12,7 @@ function checkImgState(){
 }
 
 window.addEventListener('resize', function(){
-    if(window.innerWidth > 1200){
-        videoBackgroundTopImg.src = './img/video-bg-top-pc.png'
-    }else if(window.innerWidth < 992){
-        videoBackgroundTopImg.src = './img/video-bg-top-pad.png'
-    }else if(window.innerWidth < 576){
-        videoBackgroundTopImg.src = './img/video-bg-top-phone.png'
-    }
+    checkVideoTemplateState()
 })
 
-checkImgState()
+checkVideoTemplateState()
