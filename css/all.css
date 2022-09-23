@@ -611,6 +611,7 @@ body {
   .popup-block-item {
     top: 55%;
     width: 90%;
+    height: 60%;
     padding: 7px;
   }
 }
@@ -636,24 +637,14 @@ body {
 }
 @media screen and (max-width: 768px) {
   .popup-albi {
-    width: 400px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .popup-albi {
-    width: 350px;
-  }
-}
-@media screen and (max-width: 576px) {
-  .popup-albi {
-    width: 320px;
-    top: -130px;
+    width: 250px;
+    top: 25px;
   }
 }
 @media screen and (max-width: 380px) {
   .popup-albi {
-    width: 250px;
-    top: -100px;
+    width: 200px;
+    top: 15px;
   }
 }
 .popup-talk {
@@ -769,12 +760,12 @@ body {
 }
 @media screen and (max-width: 768px) {
   .popup-content {
-    top: 45%;
+    top: 55%;
   }
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 380px) {
   .popup-content {
-    top: 45%;
+    top: 54%;
   }
 }
 .popup-word {

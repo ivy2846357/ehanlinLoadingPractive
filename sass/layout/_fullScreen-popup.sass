@@ -52,6 +52,7 @@
         +respond-to('phone')
             top: 55%
             width: 90%
+            height: 60%
             padding: 7px
         +respond-to('sephone') 
             padding: 5px
@@ -72,15 +73,12 @@
         left: 50%
         transform: translate(-50%)
         +respond-to('phone')
-            width: 400px
-        +respond-to('phone')
-            width: 350px
-        +respond-to('sphone')
-            width: 320px
-            top: -130px
-        +respond-to('sephone')
             width: 250px
-            top: -100px
+            top: 25px
+        +respond-to('sephone')
+            width: 200px
+            top: 15px
+
 
     // 對話引號圖檔設定（“）
     &-talk
@@ -152,9 +150,9 @@
         transform: translate(-50%)
         padding: 0 10px
         +respond-to('phone')
-            top: 45%
-        +respond-to('sphone')
-            top: 45%
+            top: 55%
+        +respond-to('sephone')
+            top: 54%
 
     // 文字樣式設定
     &-word
