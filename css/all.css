@@ -605,11 +605,12 @@ body {
 @media screen and (max-width: 992px) {
   .popup-block-item {
     width: 80%;
+    top: 55%;
   }
 }
 @media screen and (max-width: 768px) {
   .popup-block-item {
-    top: 55%;
+    top: 50%;
     width: 90%;
     height: 60%;
     padding: 7px;
