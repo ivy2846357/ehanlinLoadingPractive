@@ -139,6 +139,9 @@ body {
 .progress-bar.green {
   background-color: #92D34F;
 }
+.progress-bar.lightBlue {
+  background-color: #016bdf;
+}
 .progress-bar::after {
   content: "";
   position: absolute;
