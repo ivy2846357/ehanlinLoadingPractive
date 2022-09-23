@@ -643,12 +643,8 @@ body {
 }
 @media screen and (max-width: 576px) {
   .popup-albi {
-    top: 15px;
-  }
-}
-@media screen and (max-width: 380px) {
-  .popup-albi {
     width: 200px;
+    top: 15px;
   }
 }
 .popup-talk {
