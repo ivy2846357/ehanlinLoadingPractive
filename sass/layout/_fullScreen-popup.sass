@@ -53,9 +53,13 @@
         +respond-to('phone')
             top: 50%
             width: 90%
-            height: 60%
+            height: 500px
             padding: 7px
+        +respond-to('smphone')
+            height: 350px
+            padding: 5px
         +respond-to('sephone') 
+            height: 300px
             padding: 5px
 
     // 內容區塊內層設定
@@ -64,6 +68,8 @@
         border-radius: 30px
         width: 100%
         height: 100%
+        +respond-to('smphone')
+            border-radius: 25px
 
     // albi 設定
     &-albi
@@ -74,11 +80,16 @@
         left: 50%
         transform: translate(-50%)
         +respond-to('phone')
+            width: 430px
+            top: -150px
+        +respond-to('smphone')
+            width: 350px
+        +respond-to('smphone')
             width: 250px
-            top: 25px
-        +respond-to('sphone')
-            width: 200px
-            top: 15px
+            top: -100px
+        // +respond-to('sphone')
+        //     width: 200px
+        //     top: 15px
 
     // 對話引號圖檔設定（“）
     &-talk
@@ -88,8 +99,10 @@
             width: 40px
         +respond-to('sphone')
             width: 33px
+        +respond-to('smphone')
+            width: 25px
         +respond-to('sephone')
-            width: 30px
+            width: 20px
 
         // 左上引號
         &.top
@@ -104,8 +117,11 @@
             +respond-to('sphone')
                 top: -15px
                 left: -25px
+            +respond-to('sphone')
+                top: -5px
             +respond-to('sephone')
                 top: -10px
+                left: -15px
 
         // 右下引號
         &.bottom
@@ -119,8 +135,11 @@
             +respond-to('sphone')
                 bottom: -15px
                 right: -25px
+            +respond-to('sphone')
+                bottom: -5px
             +respond-to('sephone')
                 bottom: -10px
+                right: -15px
 
     // popup 三角形樣式
     &-triangle
@@ -137,9 +156,11 @@
         +respond-to('sphone')
             width: 20px
             height: 15px
-        +respond-to('sephone')
-            bottom: 25px
+            bottom: 17px
             right: 25px
+        +respond-to('sephone')
+            bottom: 15px
+            right: 20px
 
     // 文字區塊設定（文字、進度條）
     &-content
@@ -152,7 +173,7 @@
         +respond-to('phone')
             top: 55%
         +respond-to('sephone')
-            top: 54%
+            top: 45%
 
     // 文字樣式設定
     &-word

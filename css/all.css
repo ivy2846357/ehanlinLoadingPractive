@@ -628,12 +628,19 @@ body {
   .popup-block-item {
     top: 50%;
     width: 90%;
-    height: 60%;
+    height: 500px;
     padding: 7px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .popup-block-item {
+    height: 350px;
+    padding: 5px;
   }
 }
 @media screen and (max-width: 380px) {
   .popup-block-item {
+    height: 300px;
     padding: 5px;
   }
 }
@@ -642,6 +649,11 @@ body {
   border-radius: 30px;
   width: 100%;
   height: 100%;
+}
+@media screen and (max-width: 450px) {
+  .popup-modal {
+    border-radius: 25px;
+  }
 }
 .popup-albi {
   width: 450px;
@@ -654,14 +666,19 @@ body {
 }
 @media screen and (max-width: 768px) {
   .popup-albi {
-    width: 250px;
-    top: 25px;
+    width: 430px;
+    top: -150px;
   }
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 450px) {
   .popup-albi {
-    width: 200px;
-    top: 15px;
+    width: 350px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .popup-albi {
+    width: 250px;
+    top: -100px;
   }
 }
 .popup-talk {
@@ -678,9 +695,14 @@ body {
     width: 33px;
   }
 }
+@media screen and (max-width: 450px) {
+  .popup-talk {
+    width: 25px;
+  }
+}
 @media screen and (max-width: 380px) {
   .popup-talk {
-    width: 30px;
+    width: 20px;
   }
 }
 .popup-talk.top {
@@ -706,9 +728,15 @@ body {
     left: -25px;
   }
 }
+@media screen and (max-width: 576px) {
+  .popup-talk.top {
+    top: -5px;
+  }
+}
 @media screen and (max-width: 380px) {
   .popup-talk.top {
     top: -10px;
+    left: -15px;
   }
 }
 .popup-talk.bottom {
@@ -732,9 +760,15 @@ body {
     right: -25px;
   }
 }
+@media screen and (max-width: 576px) {
+  .popup-talk.bottom {
+    bottom: -5px;
+  }
+}
 @media screen and (max-width: 380px) {
   .popup-talk.bottom {
     bottom: -10px;
+    right: -15px;
   }
 }
 .popup-triangle {
@@ -758,12 +792,14 @@ body {
   .popup-triangle {
     width: 20px;
     height: 15px;
+    bottom: 17px;
+    right: 25px;
   }
 }
 @media screen and (max-width: 380px) {
   .popup-triangle {
-    bottom: 25px;
-    right: 25px;
+    bottom: 15px;
+    right: 20px;
   }
 }
 .popup-content {
@@ -782,7 +818,7 @@ body {
 }
 @media screen and (max-width: 380px) {
   .popup-content {
-    top: 54%;
+    top: 45%;
   }
 }
 .popup-word {
