@@ -119,13 +119,19 @@ body {
   }
 }
 .progress-container.green {
-  border: 4px solid #2F8986;
+  border: 4px solid #725c4a;
   background-color: rgba(255, 199, 41, 0.2);
+  position: absolute;
+  bottom: 13%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 @media screen and (max-width: 768px) {
   .progress-container.green {
-    border: 3px solid #2F8986;
+    border: 3px solid #725c4a;
     margin: 1rem auto;
+    width: 80%;
   }
 }
 .progress-bar {
@@ -382,7 +388,7 @@ body {
   height: 337px;
   position: absolute;
   left: 50%;
-  bottom: 10px;
+  bottom: 70px;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
@@ -405,13 +411,24 @@ body {
   .classroom-talk {
     width: 95%;
     height: 250px;
+    bottom: 110px;
   }
 }
 @media screen and (max-width: 576px) {
   .classroom-talk {
     height: 115%;
-    height: 200px;
-    bottom: 20px;
+    height: 180px;
+    bottom: 90px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .classroom-talk {
+    bottom: 90px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .classroom-talk {
+    bottom: 75px;
   }
 }
 .classroom-talk-item {
@@ -496,20 +513,14 @@ body {
     top: -15%;
   }
 }
+.classroom-talk-word {
+  margin-bottom: 0;
+  margin-top: 0;
+}
 @media screen and (max-width: 992px) {
   .classroom-talk-word {
+    margin-top: 1rem;
     padding: 1rem 1.5rem;
-  }
-}
-@media screen and (max-width: 576px) {
-  .classroom-talk-word {
-    margin-bottom: 0;
-    padding-bottom: 0;
-  }
-}
-@media screen and (max-width: 380px) {
-  .classroom-talk-word {
-    padding: 1rem 0.5rem 0 0.5rem;
   }
 }
 .classroom-triangle {
@@ -543,13 +554,15 @@ body {
 }
 @media screen and (max-width: 576px) {
   .classroom-triangle {
-    bottom: 28px;
-    right: 25px;
+    bottom: 40px;
+    right: 33px;
     width: 15px;
   }
 }
 @media screen and (max-width: 380px) {
   .classroom-triangle {
+    bottom: 28px;
+    right: 25px;
     width: 13px;
   }
 }

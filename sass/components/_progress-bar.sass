@@ -35,12 +35,18 @@
 
         // 校園版樣式設定（藍綠框）
         &.green
-            border: 4px solid #2F8986
+            // border: 4px solid #2F8986
+            border: 4px solid #725c4a
             background-color: rgba(255,199,41, .2)
+            position: absolute
+            bottom: 13%
+            left: 50%
+            transform: translateX(-50%)
 
             +respond-to('phone')
-                border: 3px solid #2F8986
+                border: 3px solid #725c4a
                 margin: 1rem auto
+                width: 80%
 
     // 當前進度條樣式設定
     &-bar
