@@ -639,7 +639,7 @@ body {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   width: 60%;
-  height: 55%;
+  height: 450px;
   padding: 10px;
   background-color: #ddd;
   border-radius: 30px;
@@ -664,20 +664,13 @@ body {
 @media screen and (max-width: 768px) {
   .popup-block-item {
     top: 50%;
+    height: 330px;
     width: 90%;
-    height: 500px;
     padding: 7px;
   }
 }
 @media screen and (max-width: 450px) {
   .popup-block-item {
-    height: 350px;
-    padding: 5px;
-  }
-}
-@media screen and (max-width: 380px) {
-  .popup-block-item {
-    height: 300px;
     padding: 5px;
   }
 }
@@ -693,23 +686,24 @@ body {
   }
 }
 .popup-albi {
-  width: 450px;
+  width: 400px;
   height: auto;
   position: absolute;
-  top: -150px;
+  top: -180px;
   left: 50%;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
 }
 @media screen and (max-width: 768px) {
   .popup-albi {
-    width: 430px;
-    top: -150px;
+    width: 380px;
+    top: -135px;
   }
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 576px) {
   .popup-albi {
-    width: 350px;
+    width: 290px;
+    top: -130px;
   }
 }
 @media screen and (max-width: 450px) {
@@ -719,22 +713,22 @@ body {
   }
 }
 .popup-talk {
-  width: 50px;
+  width: 35px;
   height: auto;
 }
 @media screen and (max-width: 768px) {
   .popup-talk {
-    width: 40px;
+    width: 30px;
   }
 }
 @media screen and (max-width: 576px) {
   .popup-talk {
-    width: 33px;
+    width: 25px;
   }
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 576px) {
   .popup-talk {
-    width: 25px;
+    width: 23px;
   }
 }
 @media screen and (max-width: 380px) {
@@ -756,18 +750,20 @@ body {
 }
 @media screen and (max-width: 768px) {
   .popup-talk.top {
+    top: -25px;
     left: -40px;
   }
 }
 @media screen and (max-width: 576px) {
   .popup-talk.top {
     top: -15px;
-    left: -25px;
+    left: -35px;
   }
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 450px) {
   .popup-talk.top {
     top: -5px;
+    left: -25px;
   }
 }
 @media screen and (max-width: 380px) {
@@ -788,18 +784,20 @@ body {
 }
 @media screen and (max-width: 768px) {
   .popup-talk.bottom {
+    bottom: -25px;
     right: -40px;
   }
 }
 @media screen and (max-width: 576px) {
   .popup-talk.bottom {
     bottom: -15px;
-    right: -25px;
+    right: -35px;
   }
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 450px) {
   .popup-talk.bottom {
     bottom: -5px;
+    right: -25px;
   }
 }
 @media screen and (max-width: 380px) {
@@ -842,32 +840,36 @@ body {
 .popup-content {
   width: 70%;
   position: absolute;
-  top: 50%;
+  top: 47%;
   left: 50%;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
   padding: 0 10px;
 }
-@media screen and (max-width: 768px) {
-  .popup-content {
-    top: 55%;
-  }
-}
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 992px) {
   .popup-content {
     top: 45%;
   }
 }
+@media screen and (max-width: 768px) {
+  .popup-content {
+    top: 50%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .popup-content {
+    top: 45%;
+  }
+}
+@media screen and (max-width: 380px) {
+  .popup-content {
+    top: 43%;
+  }
+}
 .popup-word {
   text-align: center;
-  font-size: 1.2rem;
   font-weight: bold;
   color: #1c4a8c;
-}
-@media screen and (max-width: 768px) {
-  .popup-word {
-    font-size: 1rem;
-  }
 }
 @media screen and (max-width: 576px) {
   .popup-word {
