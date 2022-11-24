@@ -32,31 +32,28 @@
 
     // 對話框設定
     &-talk
-        width: 1500px
-        height: 337px
+        width: 1000px
+        height: 280px
         position: absolute
         left: 50%
         bottom: 70px
         transform: translateX(-50%)
-        +respond-to('pc')
-            width: 1150px
         +respond-to('notebook')
             width: 90%
         +respond-to('pad')
-            height: 300px
+            height: 250px
         +respond-to('phone')
             width: 95%
-            height: 250px
+            height: 220px
             bottom: 110px
         // 更換對話框
         +respond-to('sphone')
             height: 115%
-            height: 180px
-            bottom: 90px
-        +respond-to('smphone')
+            height: 200px
             bottom: 90px
         +respond-to('sephone')
             bottom: 75px
+            height: 170px
 
         // 對話框 container 設定
         &-item
@@ -82,47 +79,50 @@
             left: 50%
             transform: translate(-50%,-50%)
             color: #e57417
-            font-size: 1.5rem
             font-weight: bold
-            width: 90%
+            width: 80%
             text-align: center
             +respond-to('pad')
                 top: 45%
-                font-size: 1.2rem
             +respond-to('phone')
                 top: 50%
-                font-size: 1rem
+                font-size: .8rem
             +respond-to('smphone')
                 top: 47%
-                font-size: .8rem
 
         // 對話框左上 tag 圖檔設定
         &-tag
             position: absolute
-            top: 0
+            top: -10px
             left: 6%
-            width: 220px
+            width: 180px
             height: auto
             +respond-to('pad')
                 width: 170px
+                top: -20px
             +respond-to('phone')
                 width: 150px
-                top: -6%
+                top: -30px
             +respond-to('sphone')
                 top: -19%
             +respond-to('smphone')
-                width: 120px
+                width: 130px
                 top: -13%
             +respond-to('sephone')
-                top: -15%
+                top: -20%
 
         // 內容文字設定
         &-word
             margin-bottom: 0
             margin-top: 0
             +respond-to('pad')
-                margin-top: 1rem
+                margin-top: 1.7rem
                 padding: 1rem 1.5rem
+            +respond-to('phone')
+                margin-top: 0
+                padding: 1rem
+            +respond-to('smphone')
+                padding: 0
 
     // 對話框三角形樣式
     &-triangle
@@ -137,13 +137,14 @@
             bottom: 70px
         +respond-to('pad')
             right: 60px
+            bottom: 45px
         +respond-to('phone')
             right: 50px
             bottom: 45px
             width: 20px
             animation: triangle-naimation-mobile 2s cubic-bezier(0.83, 0, 0.17, 1) infinite alternate
         +respond-to('sphone')
-            bottom: 40px
+            bottom: 35px
             right: 33px
             width: 15px
         +respond-to('sephone')
