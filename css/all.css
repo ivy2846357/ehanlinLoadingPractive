@@ -99,7 +99,7 @@ body {
 }
 @media screen and (max-width: 380px) {
   .progress-container {
-    width: 90%;
+    width: 75%;
   }
 }
 .progress-container.default {
@@ -131,7 +131,6 @@ body {
   .progress-container.green {
     border: 3px solid #725c4a;
     margin: 1rem auto;
-    width: 80%;
   }
 }
 .progress-bar {
@@ -871,7 +870,7 @@ body {
   font-weight: bold;
   color: #1c4a8c;
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   .popup-word {
     font-size: 0.8rem;
   }
@@ -933,31 +932,29 @@ body {
 }
 .video-word {
   margin-top: 5rem;
+  margin-bottom: 2rem;
   display: block;
   text-align: center;
-  font-size: 1.2rem;
   font-weight: bold;
   color: #015ba9;
 }
 @media screen and (max-width: 992px) {
   .video-word {
-    margin-top: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
   }
 }
 @media screen and (max-width: 768px) {
   .video-word {
     margin-top: 1.5rem;
+    margin-bottom: 3.5rem;
     padding: 0 1.5rem;
     font-size: 0.8rem;
   }
 }
-@media screen and (max-width: 450px) {
-  .video-word {
-    margin-top: 2rem;
-  }
-}
 @media screen and (max-width: 380px) {
   .video-word {
-    margin-top: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
   }
 }
